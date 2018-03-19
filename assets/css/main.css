@@ -9,3 +9,14 @@ small {
 	color: white !important;
 }
 
+#answers {
+	padding: 0;
+}
+
+input{
+	float:left;
+}
+
+.hidden {
+	display: none;
+}

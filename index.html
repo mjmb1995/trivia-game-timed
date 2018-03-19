@@ -23,19 +23,60 @@
 
 	<!-- Main Content -->
 	<section>
+		<div class="row text-left" id="instruction">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<h3>Instructions:</h3>
+				<h5>You will have 30 seconds to select an answer</h5>
+				<h5>When you submit your answer or run out of time:<br>
+				It will tell you if it was correct.</h5>
+				<h5>Your total score will be revealed at the end.</h5>
+			</div>
+		</div>
 		<!-- timer section -->
-		<div class="row">
-			<h2>Timer: <span id="timer">30 seconds</span></h2>
+		<div class="row hidden" id="timeSection">
+			<h3>Timer: <span id="timer">30 Seconds</span></h3>
 		</div>
 
-		<!-- Question Section -->
-		<div class="row questionSection">
-			<h3>Question: <span id="questionNum"></span></h3>
-		</div>
-
-		<!-- submit answer -->
-		<div class="row">
-			<button type="button" class="btn btn-success" id="submit">Submit Answer</button>
+		
+		<div class="row hidden" id="mainSection">
+			<div class="col-md-2"></div>
+			<!-- Question Section -->
+			<div class="col-md-8" >
+				<div id="completeQSec">
+					<h3>Question <span id="number"></span></h3>
+					<h4 id="question"></h4>
+					<form class="form-horizontal" id="answerSection">
+						<div class="row">
+							<div class="col-md-5"></div>
+							<div class="col-md-2" id="answers">
+								<input type="radio" name="answer" id="ans0"><label id="answer0"></label>
+								<br>
+								<input type="radio" name="answer" id="ans1"><label id="answer1"></label>
+								<br>
+								<input type="radio" name="answer" id="ans2"><label id="answer2"></label>
+								<br>
+								<input type="radio" name="answer" id="ans3"><label id="answer3"></label>
+								<br>
+								<!-- submit answer -->
+								<button type="button" class="btn btn-success" id="submit">Submit Answer</button>
+							</div>
+						</div>
+					</form>
+				</div>
+					
+				
+				<!-- Answer Review Section -->
+				<div id="reviewSection" class="hidden">
+					<h4>Your answer: <span id="userAns"></span></h4>
+					<h4>The correct answer: <span id="correctAns"></span></h4>
+				</div>
+				<!-- Score and Reset Game Section -->
+				<div id="gameEnd" class="hidden">
+					<h4>Correct Answers: <span id="correct"></span></h4>
+					<h4>Unanswered Questions: <span id="unanswered"></span></h4>
+				</div>
+			</div>
 		</div>
 	</section>
 
